@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0776DE;
+  --color-brand-light: #5AAEFF;
+  --color-label: #5D5D5D;
+  
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --shadow-default: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+@layer base {
+  html {
+    @apply 
+      font-sans
+  }
+
+  form input {
+    @apply 
+      rounded-lg 
+      border border-brand-light
+      pl-2
+      min-h-[45px];
+  }
+
+  form select {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230776DE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    @apply 
+      rounded-lg 
+      border border-brand-light
+      pl-2
+      appearance-none
+      bg-no-repeat
+      bg-[position:right_0.5rem_center]
+      pr-8
+      min-h-[45px];
+  }
+
+  form label {
+    @apply 
+      text-label
+      sm:text-base;
+  }
+}
+
+@layer components {
+  .form-control {
+    @apply flex flex-col gap-2;
+  }
+
+  .form-checkbox {
+    @apply 
+      pl-0
+      block
+      appearance-none
+      border border-brand
+      w-5 h-5 min-h-5 min-w-5 max-w-5 max-h-5
+      rounded-md
+      cursor-pointer;
+  }
+
+  .form-checkbox:checked {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.1001 5.58333L4.1801 8.5L10.9001 1.5' stroke='white' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: 0.20rem 0.25rem;
+    background-repeat: no-repeat;
+    background-color: var(--color-brand);
+    @apply 
+      bg-brand
+      border-brand
+      checked:bg-brand
+      checked:border-brand;
+  }
+
+  .form-submit-button {
+    @apply 
+      bg-brand
+      text-white
+      rounded-lg
+      px-4
+      py-3
+      sm:py-2
+      font-semibold
+      hover:bg-brand-light
+      cursor-pointer
+      transition
+      duration-200
+      ease-in-out;
+  }
+
+  .label--highlighted {
+    @apply text-brand;
+  }
+}
