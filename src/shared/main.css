@@ -5,6 +5,7 @@
   --color-brand: #0776DE;
   --color-brand-light: #5AAEFF;
   --color-label: #5D5D5D;
+  --color-secondary: #5D5D5D;
   
   --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
   --shadow-default: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
@@ -72,7 +73,7 @@
       checked:border-brand;
   }
 
-  .form-submit-button {
+  .plokey-button {
     @apply 
       bg-brand
       text-white

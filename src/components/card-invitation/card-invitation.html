@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./card-invitation.css">
+    <link rel="stylesheet" href="../../shared/main.css">
+    <link rel="icon" type="image/svg+xml" href="/plokey-logo-small.svg">
+    <title>Card Invitation</title>
+</head>
+<body>
+    <section class="flex justify-center items-center h-screen">
+        <!-- START: Card Invitation Component -->
+        <div class="shadow-default shadow-black/15 rounded-md mx-4 sm:mx-auto min-w-[calc(100%-16px)] sm:min-w-[700px]">
+            <div>
+                <header class="bg-brand/10 px-4 py-6 sm:px-8 rounded-t-md">
+                    <div class="flex justify-between sm:gap-4">
+                        <div>
+                            <h1 class="text-brand text-xl sm:text-4xl font-bold">
+                                Let's get you verified!
+                            </h1>
+                        </div>
+
+                        <div>
+                            <img class="w-8 h-8" src="/plokey-logo-small.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-xs text-secondary/85">
+                            <small>
+                                * If this invitation is not intended for you, please ignore this email.
+                            </small>
+                        </p>
+                    </div>
+                </header>
+
+
+                <div class="px-4 py-6 sm:px-8">
+                    <div class="real-estate__data flex flex-col gap-1">
+                        <div class="real-estate__name">
+                            <p>
+                                <a class="underline text-brand text-lg font-[600]" href="#">Test Real Estate Agency</a>
+                            </p>
+                        </div>
+                        <div class="real-estate__email flex items-center gap-2">
+                            <img src="/email.svg" alt="Email icon" class="w-4 h-4">
+                            <p>test.contact@estate.agency</p>
+                        </div>
+                        <div class="real-estate__time-sent flex items-center gap-2">
+                            <img src="/clock.svg" alt="Clock Icon" class="w-4 h-4">
+                            <p>
+                                2023-10-01 12:00
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="py-4">
+                        <div class="w-full h-[1px] bg-brand/20"></div>
+                    </div>
+
+                    <div>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: Card Invitation Component -->
+    </section>
+</body>
+</html>
