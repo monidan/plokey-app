@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../../plokey-logo-small.svg">
+    <title>Create Link Modal</title>
+  <link rel="stylesheet" crossorigin href="../../../assets/cardInvitation-CCCAWn6D.css">
+  <link rel="stylesheet" crossorigin href="../../../assets/main-BSEtLmTO.css">
+</head>
+<body>
+    <section class="flex justify-center items-center h-screen">
+
+        <!-- START: Create Link Modal Component -->
+        <div class="shadow-default shadow-black/15 rounded-md mx-4 sm:mx-auto sm:min-w-[700px]">
+            <div>
+                <header class="bg-brand/10 px-4 py-6 sm:px-8 rounded-t-md flex items-center justify-between sm:gap-4 pb-4">
+                    <h1 class="text-brand text-xl sm:text-4xl font-bold">
+                        Create a link for the Tenant
+                    </h1>
+                    <img class="max-h-[30px] sm:max-h-[75px]" src="../../../plokey-logo-small.svg" alt="Plokey Logo">
+                </header>
+                
+                <div class="px-4 py-6 sm:px-8">
+                    <form class="flex flex-col gap-2 sm:gap-4">
+                        <div class="form-control">
+                            <label for="link__access-code" class="text-sm sm:text-base">Access code</label>
+                            <input type="text" id="link__access-code">
+                        </div>
+    
+                        <div class="form-control">
+                            <label for="link__email" class="text-sm sm:text-base">
+                                <span class="label--highlighted">Tenant's</span> 
+                                email
+                            </label>
+                            <input type="email" id="link__email">
+                        </div>
+    
+                        <div class="form-control">
+                            <label for="link__tenant-id" class="text-sm sm:text-base">
+                                <span class="label--highlighted">Tenant's</span> 
+                                identification details
+                            </label>
+                            <input type="text" id="link__tenant-id">
+                        </div>
+                    
+                        <div class="form-control">
+                            <label for="link__your-email" class="text-sm sm:text-base">
+                                <span class="label--highlighted">Your</span> 
+                                email
+                            </label>
+                            <input type="email" id="link__your-email">
+                        </div>
+                    
+                        <div class="form-control">
+                            <label for="link__language" class="text-sm sm:text-base">
+                                Select the language for Tenant's verification link
+                            </label>
+                            <select id="link__language">
+                                <option value="" disabled>Select language</option>
+                                <option value="pl">Polish</option>
+                                <option value="en">English</option>
+                                <option value="ua">Ukrainian</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-control flex-row items-center py-2 sm:py-0">
+                            <input type="checkbox" class="form-checkbox grow" id="link__terms-and-conditions">
+                            <label for="link__terms-and-conditions" class="cursor-pointer text-sm sm:text-base">
+                                I accept the <a class="underline text-brand" href="#">Terms and Conditions</a> & 
+                                <a href="#" class="underline text-brand">Privacy Policy</a>
+                            </label>
+                        </div>
+    
+                        <div class="pt-4 w-full min-w-full">
+                            <button class="plokey-button sm:text-xl w-full py-4" type="submit">Send link to the tenant</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- END: Create Link Modal Component -->
+
+    </section>
+</body>
+</html>
