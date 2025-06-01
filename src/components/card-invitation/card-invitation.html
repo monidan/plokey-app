@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +9,35 @@
     <link rel="icon" type="image/svg+xml" href="/plokey-logo-small.svg">
     <title>Card Invitation</title>
 </head>
+
 <body>
     <section class="flex justify-center items-center h-screen">
         <!-- START: Card Invitation Component -->
-        <div class="shadow-default shadow-black/15 rounded-md mx-4 sm:mx-auto min-w-[calc(100%-16px)] sm:min-w-[700px]">
+        <div
+            class="shadow-default shadow-black/15 rounded-md mx-4 sm:mx-auto min-w-[calc(100%-16px)] sm:min-w-[700px] sm:max-w-[700px]">
             <div>
                 <header class="bg-brand/10 px-4 py-6 sm:px-8 rounded-t-md">
-                    <div class="flex justify-between sm:gap-4">
+                    <div class="flex justify-between items-center sm:gap-4">
                         <div>
-                            <h1 class="text-brand text-xl sm:text-4xl font-bold">
-                                Let's get you verified!
-                            </h1>
+                            <div>
+                                <h1 class="text-brand text-xl sm:text-4xl font-bold">
+                                    Let's get you verified!
+                                </h1>
+                            </div>
+
+                            <div>
+                                <p class="text-xs text-secondary/85">
+                                    <small>
+                                        * If this invitation is not intended for you, please ignore this email.
+                                    </small>
+                                </p>
+                            </div>
                         </div>
 
                         <div>
-                            <img class="w-8 h-8" src="/plokey-logo-small.svg" alt="">
+                            <img class="w-8 sm:w-10 h-8 sm:h-10" src="/plokey-logo-small.svg" alt="">
                         </div>
-                    </div>
 
-                    <div>
-                        <p class="text-xs text-secondary/85">
-                            <small>
-                                * If this invitation is not intended for you, please ignore this email.
-                            </small>
-                        </p>
                     </div>
                 </header>
 
@@ -60,14 +66,87 @@
                     </div>
 
                     <div>
-                        <ul>
-                            <li></li>
+                        <ul class="flex flex-col gap-4 sm:px-4">
+                            <li class="flex items-center gap-2">
+                                <svg class="grow sm:grow-0 min-w-[12px]" width="12" height="9" viewBox="0 0 12 9"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 5.25L4 7.75L10 1.75" stroke="#0776DE" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                <p>
+                                    The verification link is valid <span class="label--highlighted">for 3 days</span>
+                                    (until 03/28/2025 09:24).
+                                </p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="grow sm:grow-0 min-w-[12px]" width="12" height="9" viewBox="0 0 12 9"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 5.25L4 7.75L10 1.75" stroke="#0776DE" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                <p>
+                                    Complete the check <span class="label--highlighted">within 30 minutes</span> after
+                                    logging in to the bank.
+                                </p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="grow sm:grow-0 min-w-[12px]" width="12" height="9" viewBox="0 0 12 9"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 5.25L4 7.75L10 1.75" stroke="#0776DE" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                <p>
+                                    If the bank is temporarily unavailable, try again later, but <span
+                                        class="label--highlighted">not later than 3 days.</span>
+                                </p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="grow sm:grow-0 min-w-[12px]" width="12" height="9" viewBox="0 0 12 9"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 5.25L4 7.75L10 1.75" stroke="#0776DE" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                <p>
+                                    The link has already been paid for by the landlord.
+                                </p>
+                            </li>
                         </ul>
                     </div>
+
+                    <footer class="pt-2 sm:pt-4">
+                        <div class="flex flex-col gap-2">
+                            <div class="form-control flex-row items-center">
+                                <input type="checkbox" class="form-checkbox grow" id="invitation__terms-and-conditions">
+                                <label for="invitation__terms-and-conditions"
+                                    class="cursor-pointer text-sm sm:text-base">
+                                    I accept <a class="underline text-brand" href="#">Terms and Conditions</a> &
+                                    <a href="#" class="underline text-brand">Privacy Policy</a>
+                                </label>
+                            </div>
+                            <div class="form-control flex-row items-center">
+                                <input type="checkbox" class="form-checkbox grow" id="invitation__data-transfer">
+                                <label for="invitation__data-transfer" class="cursor-pointer text-sm sm:text-base">
+                                    <a class="underline text-brand" href="#">I agree to the transfer of data in
+                                        connection
+                                        with the provision of the service of access to account information.</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 w-full min-w-full">
+                            <button class="plokey-button sm:text-xl w-full py-2" type="button">Start
+                                Verification</button>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
         <!-- END: Card Invitation Component -->
     </section>
 </body>
+
 </html>
